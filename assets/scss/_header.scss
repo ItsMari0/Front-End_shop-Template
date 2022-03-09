@@ -1,0 +1,13 @@
+.header{
+    &-navbar{
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+}
+.container{}
+.navbar{
+  margin-right: -$gap;
+  margin-left: -$gap;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  
+}
