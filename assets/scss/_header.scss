@@ -6,4 +6,10 @@
 }
 
 .container{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: $gap;
+  padding-right: $gap;
+  border: 1px solid red;
 }
