@@ -1,15 +1,21 @@
-
-.header{
-  &-navbar{
-    background-color: rgba(255, 255, 255, 0.8);
-  }
+.page-header {
+    &__navbar {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
 }
 
-.container{
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: $gap;
-  padding-right: $gap;
-  border: 1px solid red;
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: $gap;
+    padding-right: $gap;
+    border: 1px solid red;
+}
+
+.navbar {
+    margin-left: -$gap;
+    margin-right: -$gap;
+    padding-top: 26px;
+    padding-bottom: 26px;
 }
