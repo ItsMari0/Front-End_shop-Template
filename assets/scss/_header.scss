@@ -2,6 +2,11 @@
     &__navbar {
         background-color: rgba(255, 255, 255, 0.8);
     }
+    &__navbar-search {
+        flex-wrap: nowrap;
+        height: 50px;
+        border: 1px solid $color-dark;
+    }
 }
 
 .container {
@@ -18,4 +23,32 @@
     margin-right: -$gap;
     padding-top: 26px;
     padding-bottom: 26px;
+    &-nav {
+        @media(min-width: 992px) {
+            width: calc(100% - 300px);
+            padding-right: $gap * 2;
+            padding-left: 70px;
+        }
+        &>.nav-item {
+            @media(min-width: 992px) {
+                flex-grow: 1;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.navbar-nav>.nav-item :not(.show) {
+    border-left: 1px solid $color-dark;
+}
+
+.page-header__navbar-search .form-control {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 1.2rem;
+    @media(min-width: 992px) {
+        width: 10rem !important;
+    }
 }
