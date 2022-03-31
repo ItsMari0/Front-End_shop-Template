@@ -1,11 +1,8 @@
 .page-header__navbar {
   background-color: rgba(255, 255, 255, 0.8);
-  /* &.dropdown .show{
-     @media (min-width: 992px){
-     border-bottom: 1px solid $color-light;
-     background-color: $color-dark;
-     }
-   }*/
+}
+.page-header__navbar__carousel {
+  border: 1px solid red;
 }
 .page-header__navbar-search {
   -ms-flex-wrap: nowrap;

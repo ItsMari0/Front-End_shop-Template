@@ -17,12 +17,9 @@
             }
           }
         }
-       /* &.dropdown .show{
-          @media (min-width: 992px){
-          border-bottom: 1px solid $color-light;
-          background-color: $color-dark;
-          }
-        }*/
+    &__carousel{
+      border: 1px solid red;
+    }
     }
     &__navbar-search {
         flex-wrap: nowrap;
