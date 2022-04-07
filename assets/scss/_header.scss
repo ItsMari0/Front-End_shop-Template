@@ -17,9 +17,12 @@
             }
           }
         }
-    &__carousel{
-      border: 1px solid red;
     }
+    &__carousel{
+      border-bottom: 1px solid $color-light;
+      background-color: rgba(0, 0, 0, .3);
+      margin-left: 0;
+      margin-right: 0;
     }
     &__navbar-search {
         flex-wrap: nowrap;
@@ -118,4 +121,3 @@
     font-size: 1.5rem;
   }
 }
-

@@ -1,8 +1,11 @@
 .page-header__navbar {
   background-color: rgba(255, 255, 255, 0.8);
 }
-.page-header__navbar__carousel {
-  border: 1px solid red;
+.page-header__carousel {
+  border-bottom: 1px solid #ffffff;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-left: 0;
+  margin-right: 0;
 }
 .page-header__navbar-search {
   -ms-flex-wrap: nowrap;
