@@ -1,0 +1,13 @@
+.breadcrumb {
+    background-color: transparent;
+    font-size: 14px;
+    opacity: 0.5;
+    padding: 1rem 0 0 0;
+    & a {
+        color: $color-light;
+    }
+    &-item+.breadcrumb-item::before {
+        content: ">";
+        color: $color-light;
+    }
+}

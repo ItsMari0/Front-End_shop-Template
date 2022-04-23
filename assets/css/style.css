@@ -90,6 +90,20 @@ body {
   background-position: 50% 0;
 }
 
+.breadcrumb {
+  background-color: transparent;
+  font-size: 14px;
+  opacity: 0.5;
+  padding: 1rem 0 0 0;
+}
+.breadcrumb a {
+  color: #ffffff;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  color: #ffffff;
+}
+
 .sidebar-filter {
   padding: 15px 30px 30px;
   color: #ffffff;
@@ -101,8 +115,8 @@ body {
   margin: 10px 0;
 }
 .sidebar-filter .form-check-input {
-  width: 0;
-  height: 0;
+  width: 20px;
+  height: 20px;
 }
 .sidebar-filter .form-check-input::before {
   display: block;
@@ -118,6 +132,17 @@ body {
 .sidebar-filter .form-check-label {
   margin-left: 0.5rem;
   font-size: 1.25rem;
+}
+.sidebar-filter__options {
+  display: block;
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+.sidebar-filter__submit {
+  background-color: #2c71b6;
+  border-radius: 0;
+  border: 1px solid #ffffff;
 }
 @media (min-width: 992px) {
   .page-header__navbar .dropdown-menu {
