@@ -11,3 +11,114 @@
         color: $color-light;
     }
 }
+
+.page {
+    &-title {
+        &__header {
+            color: $color-light;
+            font-size: 2.85rem;
+        }
+        &__sort {
+            color: $color-light;
+            border-color: $color-light;
+            background-color: $color-dark;
+            font-size: 1.25rem;
+            width: 100%;
+            margin-top: 6px;
+            padding: 3px 10px 5px;
+        }
+    }
+    &-content {
+        margin-top: calc($gap * 2);
+    }
+    &-loadMore {
+        &__more {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            & a {
+                color: $color-light;
+            }
+        }
+    }
+}
+
+.item {
+    &-wrapper {
+        position: relative;
+        border: 1px solid $color-light;
+        margin-bottom: calc($gap * 2);
+        & .container-fluid {
+            background-color: #2c71b680;
+        }
+    }
+    &-image {
+        background-color: #ffffffbf;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc($gap * 12);
+        overflow: hidden;
+    }
+    &-title {
+        color: $color-light;
+        font-size: 1.75rem;
+        padding-top: 0.75rem;
+    }
+    &-description {
+        color: $color-light;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+    &-characteristics {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        margin-top: $gap;
+        & span {
+            display: block;
+            color: $color-light;
+            margin-top: 7px;
+            margin-bottom: 7px;
+        }
+    }
+    &-price {
+        color: $color-light;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    &-actions {
+        padding: $gap;
+        & button {
+            color: $color-light;
+            border-color: $color-light;
+            border-radius: 0;
+            font-weight: bold;
+            padding: 8px 5px 10px;
+            margin-bottom: 30px !important;
+            text-transform: uppercase;
+            @media(min-width: $lg) {
+                font-size: 1.15rem;
+            }
+        }
+        & button:hover {
+            color: $color-dark;
+            border-color: $color-light;
+            background-color: rgba(255, 255, 255, 0.75);
+        }
+    }
+    &-buttons {
+        position: absolute;
+        top: calc($gap / 3);
+        right: calc($gap / 3);
+        & button {
+            display: block;
+            width: calc($gap * 2);
+            height: calc($gap * 2);
+            padding: 0;
+        }
+        & button:last-child {
+            margin-top: 5px !important;
+        }
+    }
+}
