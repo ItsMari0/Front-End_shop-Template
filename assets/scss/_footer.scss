@@ -1,0 +1,12 @@
+.page {
+    &-footer {
+        background-color: #ffffffcc;
+        &__footer {
+            text-align: center;
+            font-size: 1.25rem;
+            color: $color-dark;
+            padding-top: calc($gap * 2);
+            padding-bottom: calc($gap * 2);
+        }
+    }
+}

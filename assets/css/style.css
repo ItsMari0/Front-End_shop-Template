@@ -202,10 +202,20 @@ body {
   margin-bottom: 30px !important;
   text-transform: uppercase;
 }
+.item-actions button i {
+  margin-left: 5px;
+  font-size: 1rem;
+}
 .item-actions button:hover {
   color: #2c71b6;
   border-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.75);
+}
+.item-actions__cart {
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 .item-buttons {
   position: absolute;
@@ -261,6 +271,17 @@ body {
   background-color: #2c71b6;
   border-radius: 0;
   border: 1px solid #ffffff;
+}
+
+.page-footer {
+  background-color: #ffffffcc;
+}
+.page-footer__footer {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #2c71b6;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 @media (min-width: 992px) {
   .page-header__navbar .dropdown-menu {
