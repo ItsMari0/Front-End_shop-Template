@@ -17,6 +17,16 @@
         &__header {
             color: $color-light;
             font-size: 2.85rem;
+            &__cart-btn {
+                position: relative;
+                width: 50px;
+                height: 50px;
+                margin-left: calc($gap * 2);
+                color: $color-dark;
+                border-radius: 0;
+                background-color: $color-light;
+                border: none;
+            }
         }
         &__sort {
             color: $color-light;
@@ -109,6 +119,9 @@
             color: $color-dark;
             border-color: $color-light;
             background-color: rgba(255, 255, 255, 0.75);
+        }
+        & button:last-child {
+            margin-bottom: 15px !important;
         }
         &__cart {
             background-color: rgba(255, 255, 255, 0.2);

@@ -1,56 +1,98 @@
-.page-header {
-    &__navbar {
-        background-color: rgba(255, 255, 255, 0.8);
-        & .dropdown-menu{
-          @media (min-width: 992px) {
-            margin-top: 1px;
+.page {
+    &-header {
+        &__navbar {
+            background-color: rgba(255, 255, 255, 0.8);
+            &-search {
+                flex-wrap: nowrap;
+                height: 50px;
+                border: 1px solid $color-dark;
+                & i {
+                    display: block;
+                    padding: 10px;
+                }
+                & .form-control {
+                    border: none;
+                    border-radius: 0;
+                    background-color: transparent;
+                    box-shadow: none;
+                    font-size: 1.2rem;
+                    @media(min-width: 992px) {
+                        width: 10rem !important;
+                    }
+                }
+                & button {
+                    margin: 5px;
+                    color: $color-light;
+                    padding: 0;
+                    border-color: $color-dark;
+                    background-color: $color-dark;
+                }
+                & button:hover {
+                    color: $color-dark;
+                    background-color: $color-light;
+                }
+            }
+            & .dropdown-menu {
+                @media (min-width: 992px) {
+                    margin-top: 1px;
+                    border: none;
+                    border-radius: 0;
+                    background-color: $color-dark;
+                }
+                & a {
+                    @media (min-width: 992px) {
+                        color: $color-light;
+                        &:hover {
+                            color: $color-dark;
+                        }
+                    }
+                }
+            }
+        }
+        &__cart-btn {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            margin-left: calc($gap * 2);
+            color: $color-dark;
+            background-color: $color-light;
             border: none;
             border-radius: 0;
-            background-color: $color-dark;
-          }
-          & a{
-            @media (min-width: 992px) {
-              color: $color-light;
-              &:hover{
-                color: $color-dark;
-              }
-            }
-          }
         }
-    }
-    &__carousel{
-      border-bottom: 1px solid $color-light;
-      background-color: rgba(0, 0, 0, .3);
-      margin-left: 0;
-      margin-right: 0;
+        &__carousel {
+            border-bottom: 1px solid $color-light;
+            background-color: rgba(0, 0, 0, .3);
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
     &__navbar-search {
         flex-wrap: nowrap;
         height: 50px;
         border: 1px solid $color-dark;
-        & i{
-          display: block;
-           padding: 10px;
+        & i {
+            display: block;
+            padding: 10px;
         }
         & .form-control {
-          border: none;
-          border-radius: 0;
-          background-color: transparent;
-          box-shadow: none;
-          font-size: 1.2rem;
-          @media(min-width: 992px) {
-          width: 10rem !important;
-          }
+            border: none;
+            border-radius: 0;
+            background-color: transparent;
+            box-shadow: none;
+            font-size: 1.2rem;
+            @media(min-width: 992px) {
+                width: 10rem !important;
+            }
         }
-        & button{
-          margin: 5px;
-          color: $color-light;
-          padding: 0;
-          border-color: $color-dark;
-          background-color: $color-dark;
+        & button {
+            margin: 5px;
+            color: $color-light;
+            padding: 0;
+            border-color: $color-dark;
+            background-color: $color-dark;
         }
-      }
-      &__cart-btn{
+    }
+    &__cart-btn {
         width: 50px;
         height: 50px;
         margin-left: 30px;
@@ -59,22 +101,22 @@
         border-radius: 0;
         background-color: $color-light;
         position: relative;
-        & span{
-          position: absolute;
-          top: -12px;
-          left: -12px;
-          width: 24px;
-          height: 24px;
-          transition: background-color 0.5s;
-          color: $color-light;
-          background-color: $color-dark;
-          border-radius: 12px;
-          box-shadow: 0 0 5px rgba(0,0,0,.75);
+        & span {
+            position: absolute;
+            top: -12px;
+            left: -12px;
+            width: 24px;
+            height: 24px;
+            transition: background-color 0.5s;
+            color: $color-light;
+            background-color: $color-dark;
+            border-radius: 12px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, .75);
         }
-      }
-      &__cart-counter{
+    }
+    &__cart-counter {
         display: none;
-      }
+    }
 }
 
 .navbar {
@@ -88,36 +130,36 @@
             padding-right: $gap * 2;
             padding-left: 70px;
         }
-        & >.nav-item {
+        &>.nav-item {
             @media(min-width: 992px) {
                 flex-grow: 1;
                 text-align: center;
                 &:last-child {
-                  border-right: 1px solid $color-dark;
+                    border-right: 1px solid $color-dark;
                 }
-              }
-            & :not(.show){
-              @media (min-width: 992px) {
-                border-left: 1px solid $color-dark;
-              }
+            }
+            & :not(.show) {
+                @media (min-width: 992px) {
+                    border-left: 1px solid $color-dark;
+                }
             }
         }
     }
-    &-light .navbar-nav .nav-link{
-      font-size: 1.2rem;
-      white-space: nowrap;
-      color: $color-dark;
+    &-light .navbar-nav .nav-link {
+        font-size: 1.2rem;
+        white-space: nowrap;
+        color: $color-dark;
     }
 }
 
 .btn {
-  &-outline-success{
-    border-radius: 0;
-  }
+    &-outline-success {
+        border-radius: 0;
+    }
 }
 
 .fa {
-  &-shopping-cart{
-    font-size: 1.5rem;
-  }
+    &-shopping-cart {
+        font-size: 1.5rem;
+    }
 }
