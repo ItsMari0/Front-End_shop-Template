@@ -335,6 +335,20 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+@media (min-width: 768px) {
+  .col-md-8 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.66667%;
+            flex: 0 0 66.66667%;
+    max-width: 0 0 66.66667%;
+  }
+  .col-md-4 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
+    max-width: 0 0 33.33333%;
+  }
+}
 @media (min-width: 992px) {
   .page-header__navbar-search .form-control {
     width: 10rem !important;
