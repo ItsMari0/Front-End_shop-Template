@@ -6,6 +6,10 @@
                 flex-wrap: nowrap;
                 height: 50px;
                 border: 1px solid $color-dark;
+                @media (max-width: calc($md - 1px)) {
+                    width: calc(100% - 100px);
+                    display: inline-flex;
+                }
                 & i {
                     display: block;
                     padding: 10px;
@@ -16,12 +20,15 @@
                     background-color: transparent;
                     box-shadow: none;
                     font-size: 1.2rem;
-                    @media(min-width: 992px) {
+                    @media(min-width: $md) {
                         width: 10rem !important;
+                    }
+                    @media (max-width: calc($md - 1px)) {
+                        flex-grow: 2;
                     }
                 }
                 & button {
-                    margin: 5px;
+                    margin: calc($gap / 3);
                     color: $color-light;
                     padding: 0;
                     border-color: $color-dark;
@@ -33,14 +40,14 @@
                 }
             }
             & .dropdown-menu {
-                @media (min-width: 992px) {
+                @media (min-width: $md) {
                     margin-top: 1px;
                     border: none;
                     border-radius: 0;
                     background-color: $color-dark;
                 }
                 & a {
-                    @media (min-width: 992px) {
+                    @media (min-width: $md) {
                         color: $color-light;
                         &:hover {
                             color: $color-dark;
@@ -49,15 +56,41 @@
                 }
             }
         }
-        &__cart-btn {
-            position: relative;
-            width: 50px;
-            height: 50px;
-            margin-left: calc($gap * 2);
-            color: $color-dark;
-            background-color: $color-light;
-            border: none;
-            border-radius: 0;
+        &__cart {
+            &-btn {
+                position: relative;
+                width: 50px;
+                height: 50px;
+                margin-left: calc($gap * 2);
+                color: $color-dark;
+                background-color: $color-light;
+                border: none;
+                border-radius: 0;
+                @media (max-width: calc($md - 1px)) {
+                    margin-top: -12px !important;
+                }
+            }
+            &-btn span {
+                position: absolute;
+                top: -12px;
+                left: -12px;
+                width: 24px;
+                height: 24px;
+                transition: background-color 0.5s;
+                border-radius: 12px;
+                box-shadow: 0 0 5px #000000bf;
+                background-color: $color-dark;
+                color: $color-light;
+            }
+            &-btn:hover {
+                & span {
+                    color: $color-dark;
+                    background-color: $color-light;
+                }
+            }
+            &-counter {
+                display: none;
+            }
         }
         &__carousel {
             border-bottom: 1px solid $color-light;
@@ -65,57 +98,6 @@
             margin-left: 0;
             margin-right: 0;
         }
-    }
-    &__navbar-search {
-        flex-wrap: nowrap;
-        height: 50px;
-        border: 1px solid $color-dark;
-        & i {
-            display: block;
-            padding: 10px;
-        }
-        & .form-control {
-            border: none;
-            border-radius: 0;
-            background-color: transparent;
-            box-shadow: none;
-            font-size: 1.2rem;
-            @media(min-width: 992px) {
-                width: 10rem !important;
-            }
-        }
-        & button {
-            margin: 5px;
-            color: $color-light;
-            padding: 0;
-            border-color: $color-dark;
-            background-color: $color-dark;
-        }
-    }
-    &__cart-btn {
-        width: 50px;
-        height: 50px;
-        margin-left: 30px;
-        color: $color-dark;
-        border: none;
-        border-radius: 0;
-        background-color: $color-light;
-        position: relative;
-        & span {
-            position: absolute;
-            top: -12px;
-            left: -12px;
-            width: 24px;
-            height: 24px;
-            transition: background-color 0.5s;
-            color: $color-light;
-            background-color: $color-dark;
-            border-radius: 12px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, .75);
-        }
-    }
-    &__cart-counter {
-        display: none;
     }
 }
 
@@ -125,22 +107,24 @@
     padding-top: 26px;
     padding-bottom: 26px;
     &-nav {
-        @media(min-width: 992px) {
-            width: calc(100% - 300px);
+        @media(min-width: $md) {
+            width: calc(100% - calc($gap * 20));
             padding-right: $gap * 2;
             padding-left: 70px;
         }
-        &>.nav-item {
-            @media(min-width: 992px) {
-                flex-grow: 1;
-                text-align: center;
-                &:last-child {
-                    border-right: 1px solid $color-dark;
+        &>.nav {
+            &-item {
+                @media(min-width: 992px) {
+                    flex-grow: 1;
+                    text-align: center;
+                    &:last-child {
+                        border-right: 1px solid $color-dark;
+                    }
                 }
-            }
-            & :not(.show) {
-                @media (min-width: 992px) {
-                    border-left: 1px solid $color-dark;
+                & :not(.show) {
+                    @media (min-width: $md) {
+                        border-left: 1px solid $color-dark;
+                    }
                 }
             }
         }
@@ -149,17 +133,5 @@
         font-size: 1.2rem;
         white-space: nowrap;
         color: $color-dark;
-    }
-}
-
-.btn {
-    &-outline-success {
-        border-radius: 0;
-    }
-}
-
-.fa {
-    &-shopping-cart {
-        font-size: 1.5rem;
     }
 }

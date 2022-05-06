@@ -20,6 +20,9 @@
                     <a href="#" class="navbar-brand">
                         <img src="assets/img/icon-3.png" alt="logo">
                     </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
@@ -54,13 +57,12 @@
 
                         <button class="btn btn-outline-success my-2 my-sm-0 page-header__cart-btn" type="submit">
               <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-              <span class="page-header__cart-counter" id="cart-counter-label"></span>
-            </button>
+              <span class="page-header__cart-counter" id="cart-counter-label" style="display: block;">0</span>
+                        </button>
                     </div>
                 </nav>
             </div>
         </div>
-
         <div class="page-header__carousel">
             <div class="container">
                 <div id="header-carousel" class="carousel slide" data-ride="carousel">
@@ -101,77 +103,8 @@
 
             </div>
         </div>
-        <!--CONTENT-->
         <div class="container wrapper">
             <div class="row">
-                <aside class="col-lg-3 order-lg-1 sidebar">
-                    <div class="container-fluid sidebar-filter">
-                        <form>
-
-                            <fieldset class="form-group">
-                                <legend>Device type</legend>
-                                <div class="form-check">
-                                    <input id="opt1" class="form-check-input" type="checkbox" name="opt1" value="opt1" checked="">
-                                    <label for="opt1" class="form-check-label">Laptop</label>
-                                </div>
-                                <div class="form-check">
-                                    <input id="opt2" class="form-check-input" type="checkbox" name="opt2" value="opt2" checked="">
-                                    <label for="opt2" class="form-check-label">Tablet</label>
-                                </div>
-                            </fieldset>
-                            <fieldset class="form-group">
-                                <legend>Color</legend>
-                                <div class="form-check">
-                                    <input id="opt3" class="form-check-input" type="checkbox" name="opt3" value="opt3" checked="">
-                                    <label for="opt3" class="form-check-label">Black</label>
-                                </div>
-                                <div class="form-check">
-                                    <input id="opt4" class="form-check-input" type="checkbox" name="opt4" value="opt4" checked="">
-                                    <label for="opt4" class="form-check-label">Red</label>
-                                </div>
-                                <div class="form-check">
-                                    <input id="opt5" class="form-check-input" type="checkbox" name="opt5" value="opt5" checked="">
-                                    <label for="opt5" class="form-check-label">Green</label>
-                                </div>
-                                <div class="form-check">
-                                    <input id="opt6" class="form-check-input" type="checkbox" name="opt6" value="opt6" checked="">
-                                    <label for="opt6" class="form-check-label">Blue</label>
-                                </div>
-                                <div class="form-check">
-                                    <input id="opt7" class="form-check-input" type="checkbox" name="opt7" value="opt7" checked="">
-                                    <label for="opt7" class="form-check-label">Orange</label>
-                                </div>
-                            </fieldset>
-                            <fieldset class="form-group">
-                                <legend>RAM</legend>
-                                <div class="form-check">
-                                    <input id="opt8" class="form-check-input" type="checkbox" name="opt8" value="opt8" checked="">
-                                    <label for="opt8" class="form-check-label">1GB</label>
-                                </div>
-                                <div class="form-check">
-                                    <input id="opt9" class="form-check-input" type="checkbox" name="opt9" value="opt9" checked="">
-                                    <label for="opt9" class="form-check-label">2GB</label>
-                                </div>
-                                <div class="form-check">
-                                    <input id="opt10" class="form-check-input" type="checkbox" name="opt10" value="opt10" checked="">
-                                    <label for="opt10" class="form-check-label">4GB</label>
-                                </div>
-                                <div class="form-check">
-                                    <input id="opt11" class="form-check-input" type="checkbox" name="opt11" value="opt11" checked="">
-                                    <label for="opt11" class="form-check-label">6GB</label>
-                                </div>
-                                <div class="form-check">
-                                    <input id="opt12" class="form-check-input" type="checkbox" name="opt12" value="opt12" checked="">
-                                    <label for="opt12" class="form-check-label">8GB</label>
-                                </div>
-                            </fieldset>
-                            <a class="sidebar-filter__options" href="#">Show more options...</a>
-                            <button class="btn btn-primary btn-block sidebar-filter__submit" type="submit">Submit</button>
-                        </form>
-                    </div>
-                </aside>
-
-                <!--MAIN CONTENT-->
                 <main class="col-lg-9 order-lg-2">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -462,10 +395,75 @@
                         <div class="col-md-12 page-loadMore__more"><a href="#">Load more...</a></div>
                     </div>
                 </main>
+                <aside class="col-lg-3 order-lg-1 sidebar">
+                    <div class="container-fluid sidebar-filter">
+                        <form>
+
+                            <fieldset class="form-group">
+                                <legend>Device type</legend>
+                                <div class="form-check">
+                                    <input id="opt1" class="form-check-input" type="checkbox" name="opt1" value="opt1" checked="">
+                                    <label for="opt1" class="form-check-label">Laptop</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="opt2" class="form-check-input" type="checkbox" name="opt2" value="opt2" checked="">
+                                    <label for="opt2" class="form-check-label">Tablet</label>
+                                </div>
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <legend>Color</legend>
+                                <div class="form-check">
+                                    <input id="opt3" class="form-check-input" type="checkbox" name="opt3" value="opt3" checked="">
+                                    <label for="opt3" class="form-check-label">Black</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="opt4" class="form-check-input" type="checkbox" name="opt4" value="opt4" checked="">
+                                    <label for="opt4" class="form-check-label">Red</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="opt5" class="form-check-input" type="checkbox" name="opt5" value="opt5" checked="">
+                                    <label for="opt5" class="form-check-label">Green</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="opt6" class="form-check-input" type="checkbox" name="opt6" value="opt6" checked="">
+                                    <label for="opt6" class="form-check-label">Blue</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="opt7" class="form-check-input" type="checkbox" name="opt7" value="opt7" checked="">
+                                    <label for="opt7" class="form-check-label">Orange</label>
+                                </div>
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <legend>RAM</legend>
+                                <div class="form-check">
+                                    <input id="opt8" class="form-check-input" type="checkbox" name="opt8" value="opt8" checked="">
+                                    <label for="opt8" class="form-check-label">1GB</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="opt9" class="form-check-input" type="checkbox" name="opt9" value="opt9" checked="">
+                                    <label for="opt9" class="form-check-label">2GB</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="opt10" class="form-check-input" type="checkbox" name="opt10" value="opt10" checked="">
+                                    <label for="opt10" class="form-check-label">4GB</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="opt11" class="form-check-input" type="checkbox" name="opt11" value="opt11" checked="">
+                                    <label for="opt11" class="form-check-label">6GB</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="opt12" class="form-check-input" type="checkbox" name="opt12" value="opt12" checked="">
+                                    <label for="opt12" class="form-check-label">8GB</label>
+                                </div>
+                            </fieldset>
+                            <a class="sidebar-filter__options" href="#">Show more options...</a>
+                            <button class="btn btn-primary btn-block sidebar-filter__submit" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </aside>
             </div>
         </div>
     </header>
-
     <footer class="page-footer">
         <div class="container">
             <div class="row">

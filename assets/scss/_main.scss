@@ -45,7 +45,7 @@
         &__more {
             font-size: 2rem;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: calc($gap *2);
             & a {
                 color: $color-light;
             }
@@ -105,14 +105,17 @@
             border-radius: 0;
             font-weight: bold;
             padding: 8px 5px 10px;
-            margin-bottom: 30px !important;
+            margin-bottom: calc($gap * 2) !important;
             text-transform: uppercase;
             & i {
-                margin-left: 5px;
+                margin-left: calc($gap / 3);
                 font-size: 1rem;
             }
             @media(min-width: $lg) {
                 font-size: 1.15rem;
+            }
+            @media(max-width: $lg) {
+                font-size: 0.9rem;
             }
         }
         & button:hover {
@@ -121,7 +124,7 @@
             background-color: rgba(255, 255, 255, 0.75);
         }
         & button:last-child {
-            margin-bottom: 15px !important;
+            margin-bottom: $gap !important;
         }
         &__cart {
             background-color: rgba(255, 255, 255, 0.2);
@@ -139,7 +142,7 @@
             padding: 0;
         }
         & button:last-child {
-            margin-top: 5px !important;
+            margin-top: calc($gap / 3) !important;
         }
     }
 }

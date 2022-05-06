@@ -1,25 +1,45 @@
-.btn-outline-success {
-    color: $color-dark;
-    border-color: $color-dark;
-    border-radius: 0;
-}
-
-.btn-outline-success:hover {
-    color: $color-light;
-    border-color: $color-dark;
-    background-color: $color-dark;
-}
-
-.col-md-8 {
-    @media (min-width: $sm) {
-        flex: 0 0 $col-md-8;
-        max-width: 0 0 $col-md-8;
+.btn {
+    &-outline {
+        &-success {
+            color: $color-dark;
+            border-color: $color-dark;
+            border-radius: 0;
+        }
+        &-success:hover {
+            color: $color-light;
+            border-color: $color-dark;
+            background-color: $color-dark;
+        }
     }
 }
 
-.col-md-4 {
-    @media (min-width: $sm) {
-        flex: 0 0 $col-md-4;
-        max-width: 0 0 $col-md-4;
+.fa {
+    &-shopping-cart {
+        font-size: 1.5rem;
+    }
+}
+
+.col {
+    &-md {
+        &-4 {
+            @media (min-width: $sm) {
+                flex: 0 0 $col-md-4;
+                max-width: 0 0 $col-md-4;
+            }
+        }
+        &-8 {
+            @media (min-width: $sm) {
+                flex: 0 0 $col-md-8;
+                max-width: 0 0 $col-md-8;
+            }
+        }
+    }
+}
+
+.sidebar {
+    &-filter {
+        @media (max-width: calc($md - 1px)) {
+            border-top: 1px solid $color-light;
+        }
     }
 }
